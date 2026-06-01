@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Universal Eating Monitor Analyser</title>
+    <link rel="stylesheet" href="vendor/pico.min.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="wasm_exec.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <section class="shell" aria-labelledby="app-title">
+        <header class="intro">
+          <h1 id="app-title">Universal Eating Monitor Analyser</h1>
+          <p>
+            Upload Universal Eating Monitor text files, choose the detected VAS
+            questions to include, and download one XLSX workbook per participant, or a
+            ZIP when multiple workbooks are produced. Each session becomes a worksheet
+            with take, refill, pause, minute, quartile, raw VAS, and interpolated VAS
+            analysis.
+          </p>
+          <p>
+            Processing happens entirely in your browser. Files are never uploaded,
+            never leave your computer, and are not stored anywhere.
+          </p>
+        </header>
+
+        <section class="panel" aria-label="UEM file processing">
+          <form id="upload-form">
+            <label for="file-input">Choose UEM text files to process</label>
+            <input id="file-input" name="files" type="file" multiple accept=".txt,text/plain">
+            <small>You can select one or more .txt exports. Files must be 5MB or smaller.</small>
+
+            <div id="status" class="status" role="status" aria-live="polite" hidden></div>
+          </form>
+
+          <section id="review" class="review" hidden>
+            <div>
+              <h2>Review files</h2>
+              <p id="summary"></p>
+            </div>
+
+            <div id="warnings" class="warnings" hidden></div>
+
+            <fieldset id="question-fieldset">
+              <legend>VAS questions to include</legend>
+              <small>These codes were found in your files. Checked questions are included in the raw VAS and interpolation sections.</small>
+              <div id="questions" class="questions"></div>
+            </fieldset>
+
+            <button id="generate-button" type="button">Create download</button>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>
+        BSD-3-Clause licensed. Source on
+        <a href="https://github.com/adambrett/uem-analyser">GitHub</a>.
+        <a href="https://adbr.me">Author</a>.
+      </small>
+    </footer>
+  </body>
+</html>

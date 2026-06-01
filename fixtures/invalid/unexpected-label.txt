@@ -1,0 +1,4 @@
+Heading,Time,Course
+Refill Stage,5,,,100,
+Scale Reading,10,,,100,
+Snack Break,12,,,99,

@@ -1,0 +1,156 @@
+:root {
+  color-scheme: light dark;
+  --pico-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background: var(--pico-background-color);
+}
+
+body::before {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  display: block;
+  height: 5px;
+  background: var(--pico-primary-background);
+  content: "";
+}
+
+.container {
+  max-width: 58rem;
+}
+
+.shell {
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+  padding-top: 4rem;
+}
+
+.intro {
+  max-width: 44rem;
+}
+
+.intro h1 {
+  margin-bottom: 0.6rem;
+}
+
+.intro p {
+  max-width: 66ch;
+  color: var(--pico-muted-color);
+}
+
+.panel {
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: 8px;
+  background: var(--pico-card-background-color);
+  padding: 1.25rem;
+}
+
+#upload-form {
+  margin-bottom: 0;
+}
+
+#upload-form > small {
+  margin-bottom: 0;
+}
+
+.status {
+  margin-top: 1rem;
+  border-radius: 8px;
+  background: var(--pico-card-sectioning-background-color);
+  padding: 0.75rem 0.9rem;
+  color: var(--pico-muted-color);
+  font-size: 0.92rem;
+}
+
+.status[data-kind="error"] {
+  background: var(--pico-form-element-invalid-border-color);
+  color: var(--pico-primary-inverse);
+}
+
+.status[data-kind="success"] {
+  background: var(--pico-form-element-valid-border-color);
+  color: var(--pico-primary-inverse);
+}
+
+.review {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--pico-muted-border-color);
+  padding-top: 1.25rem;
+}
+
+.review h2 {
+  margin-bottom: 0.35rem;
+  font-size: 1.2rem;
+}
+
+.review p {
+  color: var(--pico-muted-color);
+}
+
+.warnings {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: var(--pico-mark-background-color);
+  padding: 0.85rem 1rem;
+  color: var(--pico-mark-color);
+  font-size: 0.92rem;
+}
+
+.warnings p {
+  margin: 0;
+  color: inherit;
+}
+
+.questions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 0.5rem 1rem;
+}
+
+.questions label {
+  margin: 0;
+}
+
+#generate-button {
+  margin-bottom: 0;
+  width: auto;
+}
+
+.site-footer {
+  width: min(58rem, calc(100% - 2rem));
+  margin-inline: auto;
+  padding-block: 0 2rem;
+  color: var(--pico-muted-color);
+}
+
+.site-footer a {
+  color: inherit;
+}
+
+@media (max-width: 63.99rem) {
+  body {
+    border-top: 5px solid var(--pico-primary-background);
+  }
+
+  body::before {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell {
+    align-content: start;
+    padding-top: 2rem;
+  }
+
+  .panel {
+    padding: 1rem;
+  }
+
+  #generate-button {
+    width: 100%;
+  }
+}

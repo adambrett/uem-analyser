@@ -1,0 +1,10 @@
+Heading,Time,Course
+Refill Stage,6,,,102,
+Scale Reading,10,,,102,
+Scale Reading,19,,,100.7,
+Vas Result,25,,,38,How FULL are you?
+Scale Reading,35,,,100.7,
+Scale Reading,82,,,98.4,
+Vas Result,100,,,55,How FULL are you?
+Scale Reading,125,,,96.2,
+Vas Result,160,,,77,How FULL are you?

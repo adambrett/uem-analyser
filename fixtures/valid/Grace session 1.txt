@@ -1,0 +1,15 @@
+Heading,Time,Course
+Refill Stage,4,,,98,
+Scale Reading,9,,,98,
+Scale Reading,18,,,96.9,
+Vas Result,24,,,30,How FULL are you?
+Vas Result,28,,,65,How THIRSTY are you?
+Scale Reading,38,,,96.9,
+Scale Reading,75,,,94.6,
+Vas Result,90,,,46,How FULL are you?
+Scale Reading,120,,,92.4,
+Refill Stage,140,,,116,
+Scale Reading,155,,,116,
+Scale Reading,205,,,111.8,
+Vas Result,235,,,72,How FULL are you?
+Vas Result,240,,,33,How THIRSTY are you?
